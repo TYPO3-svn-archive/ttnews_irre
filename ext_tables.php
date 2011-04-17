@@ -27,6 +27,7 @@ if (!defined ("TYPO3_MODE"))     die ("Access denied.");
 
 $extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['ttnews_irre']);
 
+t3lib_extMgm::addLLrefForTCAdescr('tt_news','EXT:ttnews_irre/locallang_csh_tt_news.xml');
 
 $irreFieldConfiguration = array(
 	'tx_ttnewsirre_content' => array (
