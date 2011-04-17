@@ -44,7 +44,6 @@ class tx_ttnewsirre_marker {
 		
 		$markerArray['###NEWS_CONTENT###'] = $cObj->RECORDS($tt_content_conf);
 
-
 		return $markerArray;
 	}
 
