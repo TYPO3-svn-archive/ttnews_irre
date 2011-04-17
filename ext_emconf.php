@@ -3,7 +3,7 @@
 ########################################################################
 # Extension Manager/Repository config file for ext "ttnews_irre".
 #
-# Auto generated 17-04-2011 11:03
+# Auto generated 17-04-2011 11:21
 #
 # Manual updates:
 # Only the data in the array - everything else is removed by next
@@ -39,7 +39,9 @@ $EM_CONF[$_EXTKEY] = array(
 		'suggests' => array(
 		),
 	),
-	'_md5_values_when_last_written' => 'a:5:{s:9:"ChangeLog";s:4:"fcd3";s:10:"README.txt";s:4:"ee2d";s:12:"ext_icon.gif";s:4:"1bdc";s:19:"doc/wizard_form.dat";s:4:"1e76";s:20:"doc/wizard_form.html";s:4:"7354";}',
+	'_md5_values_when_last_written' => 'a:6:{s:9:"ChangeLog";s:4:"fcd3";s:10:"README.txt";s:4:"ee2d";s:12:"ext_icon.gif";s:4:"1bdc";s:14:"ext_tables.php";s:4:"a75c";s:19:"doc/wizard_form.dat";s:4:"1e76";s:20:"doc/wizard_form.html";s:4:"7354";}',
+	'suggests' => array(
+	),
 );
 
 ?>
