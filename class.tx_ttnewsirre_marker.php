@@ -26,6 +26,7 @@
 class tx_ttnewsirre_marker {
 
 	function extraItemMarkerProcessor($markerArray, $row) {
+		$extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['ttnews_irre']);
 		$cObj = t3lib_div::makeInstance('tslib_cObj');
 		$res = $GLOBALS['TYPO3_DB']->exec_SELECTquery(
 			'uid', 'tt_content',
@@ -34,15 +35,19 @@ class tx_ttnewsirre_marker {
 				$cObj->enableFields('tt_content'),
 			'', 'sorting'
 		);
-		while (false !== ($rowContent = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res))) {
+		while ($rowContent = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
 			$rowUids[] = $rowContent['uid'];
 		}
-		$tt_content_conf = array('tables' => 'tt_content'
-			,'source' => implode(',', $rowUids)
-			,'dontCheckPid' => 0
-		);
-		
-		$markerArray['###NEWS_CONTENT###'] = $cObj->RECORDS($tt_content_conf);
+		if((int) count($rowUids) === 0 && (boolean) $extConf['renderBodytextIfZeroElements'] === TRUE) {
+			$markerArray['###NEWS_CONTENT###'] = $markerArray['###NEWS_CONTENT###'];
+		} else {
+			$tt_content_conf = array('tables' => 'tt_content'
+				,'source' => implode(',', $rowUids)
+				,'dontCheckPid' => 0
+			);
+
+			$markerArray['###NEWS_CONTENT###'] = $cObj->RECORDS($tt_content_conf);
+		}
 
 		return $markerArray;
 	}
