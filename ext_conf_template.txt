@@ -1,0 +1,2 @@
+ # cat=basic; type=boolean; label=Hide original content field (RTE field) from tt_news
+hideContentField = 0
