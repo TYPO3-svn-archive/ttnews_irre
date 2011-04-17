@@ -3,7 +3,7 @@
 ########################################################################
 # Extension Manager/Repository config file for ext "ttnews_irre".
 #
-# Auto generated 17-04-2011 11:21
+# Auto generated 17-04-2011 15:29
 #
 # Manual updates:
 # Only the data in the array - everything else is removed by next
@@ -29,7 +29,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'clearCacheOnLoad' => 0,
 	'lockType' => '',
 	'author_company' => '',
-	'version' => '0.0.0',
+	'version' => '0.1.0',
 	'constraints' => array(
 		'depends' => array(
 			'tt_news' => '',
@@ -39,7 +39,7 @@ $EM_CONF[$_EXTKEY] = array(
 		'suggests' => array(
 		),
 	),
-	'_md5_values_when_last_written' => 'a:6:{s:9:"ChangeLog";s:4:"fcd3";s:10:"README.txt";s:4:"ee2d";s:12:"ext_icon.gif";s:4:"1bdc";s:14:"ext_tables.php";s:4:"a75c";s:19:"doc/wizard_form.dat";s:4:"1e76";s:20:"doc/wizard_form.html";s:4:"7354";}',
+	'_md5_values_when_last_written' => 'a:11:{s:9:"ChangeLog";s:4:"fcd3";s:10:"README.txt";s:4:"ee2d";s:30:"class.tx_ttnewsirre_marker.php";s:4:"7c8a";s:21:"ext_conf_template.txt";s:4:"7b7a";s:12:"ext_icon.gif";s:4:"5e2a";s:17:"ext_localconf.php";s:4:"57de";s:14:"ext_tables.php";s:4:"b66c";s:14:"ext_tables.sql";s:4:"d7ca";s:16:"locallang_db.xml";s:4:"b07b";s:19:"doc/wizard_form.dat";s:4:"1e76";s:20:"doc/wizard_form.html";s:4:"7354";}',
 	'suggests' => array(
 	),
 );

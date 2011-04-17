@@ -54,7 +54,7 @@ $irreFieldConfiguration = array(
 
 t3lib_div::loadTCA('tt_news');
 t3lib_extMgm::addTCAcolumns('tt_news', $irreFieldConfiguration, 1);
-t3lib_extMgm::addToAllTCAtypes('tt_news', 'tx_ttnewsirre_content;;;;1-1-1', '', 'after:title');
+t3lib_extMgm::addToAllTCAtypes('tt_news', 'tx_ttnewsirre_content;;;;1-1-1', '', 'after:short');
 
 
 if((boolean) $extConf['hideContentField'] === TRUE) {
