@@ -40,7 +40,7 @@ class tx_ttnewsirre_marker {
 		}
 		if((int) count($rowUids) === 0 && (boolean) $extConf['renderBodytextIfZeroElements'] === TRUE) {
 			$markerArray['###NEWS_CONTENT###'] = $markerArray['###NEWS_CONTENT###'];
-		} else {
+		} elseif((int) count($rowUids) > 0) {
 			$tt_content_conf = array('tables' => 'tt_content'
 				,'source' => implode(',', $rowUids)
 				,'dontCheckPid' => 0
